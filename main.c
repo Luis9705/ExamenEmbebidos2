@@ -5,10 +5,9 @@
 #include "system_common/system_common.h"
 #include "uc_timer/uc_timer.h"
 #include "delay/delay.h"
-#include "uc_uart/uc_uart.h"
+#include "print/print.h"
 #include "buttons/buttons.h"
 #include "led/led.h"
-#include "parameters.h"
 
 
 typedef enum  {
@@ -22,18 +21,15 @@ timerStatusType timer_status = OFF;
 
 
 int main(void)  {
+
+
     system_clock_setup();
-
-
-
-
     buttons_setup();
-
+    led_setup();
     delay_setup();
+    print_setup();
 
-    uart_pin_setup();
-    uart_setup();
-    uart_start();
+
 
     timer_setup();
 
@@ -42,7 +38,7 @@ int main(void)  {
 
         if(reset_button_pressed()){
             timer_reset();
-            uart_printf("Timer Reset.\n");
+            print("Timer Reset.\n");
             led_off(); 
             timer_status = OFF;
         }
@@ -52,13 +48,13 @@ int main(void)  {
 
                 timer_status = RUNNING;
                 timer_start();
-                uart_printf("Timer Started.\n");
+                print("Timer Started.\n");
 
             }else if(timer_status == PAUSED){
 
                 timer_status = RUNNING;
                 timer_continue();
-                uart_printf("Timer Continued.\n");
+                print("Timer Continued.\n");
 
             }
         }
@@ -68,7 +64,7 @@ int main(void)  {
             timer_stop();
             led_off(); 
             int seconds = timer_get_seconds();
-            uart_printf("Timer Stopped, time is: %d seconds\n", seconds);
+            print("Timer Stopped, time is: %d seconds\n", seconds);
         }
 
         if(timer_status == RUNNING){
