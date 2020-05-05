@@ -1,13 +1,13 @@
 /// @file main.c
 //  Copyright 2020 Copyright Equipo 2
 
+#include <stdlib.h>
 #include "system_common/system_common.h"
 #include "uc_timer/uc_timer.h"
 #include "delay/delay.h"
 #include "uc_uart/uc_uart.h"
-#include "gpio/gpio.h"
-#include <stdlib.h>
-
+#include "buttons/buttons.h"
+#include "parameters.h"
 
 
 typedef enum  {
@@ -23,12 +23,11 @@ timerStatusType timer_status = OFF;
 int main(void)  {
     system_clock_setup();
 
-    gpio_init_pin(LED_PORT, LED_PIN, OUTPUT);
+     gpio_init_pin(LED_PORT, LED_PIN, OUTPUT);
     gpio_pin_set(LED_PORT, LED_PIN); //logica inversa para apagar led
 
-    gpio_init_pin(RESET_BUTTON_PORT, RESET_BUTTON_PIN,INPUT);
-    gpio_init_pin(START_BUTTON_PORT, START_BUTTON_PIN,INPUT);
-    gpio_init_pin(STOP_BUTTON_PORT, STOP_BUTTON_PIN,INPUT);
+
+    buttons_setup();
 
     delay_setup();
 
@@ -41,14 +40,14 @@ int main(void)  {
 
     for (;;)  {
 
-        if(gpio_get_pin_status(RESET_BUTTON_PORT, RESET_BUTTON_PIN) == SET){
+        if(reset_button_pressed()){
             timer_reset();
             uart_printf("Timer Reset.\n");
             gpio_pin_set(LED_PORT, LED_PIN); //apagar led
             timer_status = OFF;
         }
 
-        if(gpio_get_pin_status(START_BUTTON_PORT, START_BUTTON_PIN) == SET){
+        if(start_button_pressed()){
             if(timer_status == OFF){
 
                 timer_status = RUNNING;
@@ -64,7 +63,7 @@ int main(void)  {
             }
         }
 
-        if(gpio_get_pin_status(STOP_BUTTON_PORT, STOP_BUTTON_PIN) == SET){
+        if(stop_button_pressed()){
             timer_status = PAUSED;
             timer_stop();
             gpio_pin_set(LED_PORT, LED_PIN); //apagar led

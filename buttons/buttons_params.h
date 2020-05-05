@@ -1,0 +1,15 @@
+//  Copyright 2020 Copyright Equipo 2
+#ifndef BUTTONS_PARAMS_H_   /* Include guard */
+#define BUTTONS_PARAMS_H_
+
+#define RESET_BUTTON_PORT 1
+#define RESET_BUTTON_PIN 1 
+#define START_BUTTON_PORT 1
+#define START_BUTTON_PIN 1
+#define STOP_BUTTON_PORT 1
+#define STOP_BUTTON_PIN 1
+
+
+
+
+#endif  // ABSTRACTION_AND_DOCUMENTATION_UC_TIMER_BUTTONS_PARAMS_H_
