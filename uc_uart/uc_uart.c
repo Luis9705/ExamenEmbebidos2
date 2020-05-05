@@ -1,26 +1,26 @@
 /// @file uc_uart.c
 //  Copyright 2020 Copyright Equipo 2
-#include "uc_uart.h"
-#include <libopencm3/stm32/usart.h>
-#include <libopencm3/cm3/nvic.h>
-#include <libopencm3/stm32/rcc.h>
-#include <libopencm3/stm32/gpio.h>
-#include "../miniprintf/miniprintf.h"
+#include "uc_uart.h"                        ///<UART custom defines.
+#include <libopencm3/stm32/usart.h>         ///<libopencm3 USART functions.
+#include <libopencm3/cm3/nvic.h>            ///<libopencm3 NVIC functions.
+#include <libopencm3/stm32/rcc.h>           ///<libopencm3 RCC functions.
+#include <libopencm3/stm32/gpio.h>          ///<libopencm3 GPIO functions.
+#include "../miniprintf/miniprintf.h"       ///<Miniprint library include.
 
-uint32_t current_uart;
+uint32_t current_uart; ///<Currently used UART.
 
 /**
- * Starts UART transmission.
- * @param[in] character
+ * @brief Sends a char.
+ * @param[in] character Char to be transmitted.
  */
 void uart_putc(char ch)  {
     usart_send_blocking(current_uart, ch);
 }
 
 /**
- * Prints UART message
- * param[in] format
- * param[out] rc
+ * @brief Prints UART message
+ * @param[in] format String format.
+ * @param[out] rc
  */
 int uart_printf(const char *format, ...)  {
     va_list args;
@@ -33,7 +33,11 @@ int uart_printf(const char *format, ...)  {
 }
 
 /**
- * Sets up the UART peripheral pin ports needed.
+ * @brief Sets up the UART peripheral pin ports needed.
+ * @param[in] tx_port Specifies the port of the UART transmitter.
+ * @param[in] tx_pin Specifies the pin of the UART transmitter.
+ * @param[in] rx_port Specifies the port of the UART receiver.
+ * @param[in] rx_pin Specifies the pin of the UART receiver.
  */
 void uart_pin_setup(uint32_t tx_port, uint32_t tx_pin, uint32_t rx_port, uint32_t rx_pin) {
     rcc_periph_clock_enable(tx_port);
@@ -49,7 +53,10 @@ void uart_pin_setup(uint32_t tx_port, uint32_t tx_pin, uint32_t rx_port, uint32_
 }
 
 /**
- * Sets up the UART configuration.
+ * @brief Sets up the UART configuration.
+ * @param[in] uart UART to be used.
+ * @param[in] baudrate Baudrate used for UART communication.
+ * @param[in] databits Message data width.
  */
 void uart_setup(uint32_t uart, uint32_t baudrate, uint32_t databits) {
     rcc_periph_clock_enable(uart);
@@ -63,7 +70,8 @@ void uart_setup(uint32_t uart, uint32_t baudrate, uint32_t databits) {
 
 
 /**
- * Starts UART.
+ * @brief Starts UART.
+ * @param[in] uart UART to be used.
  */
 void uart_start(uint32_t uart) {
     usart_enable(uart);
