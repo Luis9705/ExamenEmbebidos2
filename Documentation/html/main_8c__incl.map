@@ -1,0 +1,12 @@
+<map id="/home/jonacb/stm32/ExamenEmbebidos2/main.c" name="/home/jonacb/stm32/ExamenEmbebidos2/main.c">
+<area shape="rect" id="node2" href="$system__common_8h.html" title="system_common header file. " alt="" coords="7,95,176,136"/>
+<area shape="rect" id="node4" href="$timer_8h.html" title="TIMER header file. " alt="" coords="203,102,297,129"/>
+<area shape="rect" id="node6" href="$delay_8h.html" title="delay header file. " alt="" coords="439,102,538,129"/>
+<area shape="rect" id="node8" href="$print_8h.html" title="Print function headers. " alt="" coords="328,102,415,129"/>
+<area shape="rect" id="node10" href="$buttons_8h.html" title="Button header file. " alt="" coords="562,102,685,129"/>
+<area shape="rect" id="node13" href="$led_8h.html" title="LED header file. " alt="" coords="763,102,833,129"/>
+<area shape="rect" id="node5" href="$timer__params_8h_source.html" title="timer_params.h" alt="" coords="191,184,303,211"/>
+<area shape="rect" id="node9" href="$print__params_8h.html" title="Definition of parameters used to configure the UART. " alt="" coords="328,184,436,211"/>
+<area shape="rect" id="node12" href="$buttons__params_8h.html" title="Button parameters. " alt="" coords="549,184,676,211"/>
+<area shape="rect" id="node14" href="$led__params_8h.html" title="LED PARAMS NEEDED. " alt="" coords="800,184,900,211"/>
+</map>

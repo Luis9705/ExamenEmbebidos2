@@ -1,0 +1,129 @@
+\hypertarget{gpio_8c}{}\section{/home/jonacb/stm32/\+Examen\+Embebidos2/gpio/gpio.c File Reference}
+\label{gpio_8c}\index{/home/jonacb/stm32/\+Examen\+Embebidos2/gpio/gpio.\+c@{/home/jonacb/stm32/\+Examen\+Embebidos2/gpio/gpio.\+c}}
+
+
+G\+P\+IO function definitions.  
+
+
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$libopencm3/stm32/rcc.\+h$>$}\newline
+{\ttfamily \#include $<$libopencm3/stm32/gpio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for gpio.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gpio_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{gpio_8c_a5f93ca5922d03066040a1d1a96f22b50}{gpio\+\_\+init\+\_\+pin} (uint32\+\_\+t port, uint32\+\_\+t pin, \hyperlink{gpio_8h_a4ce7befa70373167bad76d2d332bd457}{pin\+Mode\+Type} mode)
+\begin{DoxyCompactList}\small\item\em $<$libopencm3 G\+P\+IO functions \end{DoxyCompactList}\item 
+\hyperlink{gpio_8h_a86299681096e04133f7b7de159bbfa5f}{pin\+Status\+Type} \hyperlink{gpio_8c_aa2c485c31c4c6a6fee2b69431bca91e0}{gpio\+\_\+get\+\_\+pin\+\_\+status} (uint32\+\_\+t port, uint32\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Returns the pin status when called. \end{DoxyCompactList}\item 
+void \hyperlink{gpio_8c_ae43fe46d3907010a51432bb0fb10bc08}{gpio\+\_\+pin\+\_\+toggle} (uint32\+\_\+t port, uint32\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Toggle a given G\+P\+IO pin. \end{DoxyCompactList}\item 
+void \hyperlink{gpio_8c_a23cdd4156dd0a9e343f6cc7e9396d6a2}{gpio\+\_\+pin\+\_\+set} (uint32\+\_\+t port, uint32\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Set a given G\+P\+IO pin. \end{DoxyCompactList}\item 
+void \hyperlink{gpio_8c_a1af626a71fd9a5c7e59c250815067f31}{gpio\+\_\+pin\+\_\+reset} (uint32\+\_\+t port, uint32\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Clear a given G\+P\+IO pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+G\+P\+IO function definitions. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{gpio_8c_aa2c485c31c4c6a6fee2b69431bca91e0}\label{gpio_8c_aa2c485c31c4c6a6fee2b69431bca91e0}} 
+\index{gpio.\+c@{gpio.\+c}!gpio\+\_\+get\+\_\+pin\+\_\+status@{gpio\+\_\+get\+\_\+pin\+\_\+status}}
+\index{gpio\+\_\+get\+\_\+pin\+\_\+status@{gpio\+\_\+get\+\_\+pin\+\_\+status}!gpio.\+c@{gpio.\+c}}
+\subsubsection{\texorpdfstring{gpio\+\_\+get\+\_\+pin\+\_\+status()}{gpio\_get\_pin\_status()}}
+{\footnotesize\ttfamily \hyperlink{gpio_8h_a86299681096e04133f7b7de159bbfa5f}{pin\+Status\+Type} gpio\+\_\+get\+\_\+pin\+\_\+status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port,  }\item[{uint32\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Returns the pin status when called. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em port} & -\/ G\+P\+IO block port. \\
+\hline
+\mbox{\tt in}  & {\em pin} & -\/ G\+P\+IO pin port. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pin\+Status -\/ Status of the given G\+P\+IO pin. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gpio_8c_a5f93ca5922d03066040a1d1a96f22b50}\label{gpio_8c_a5f93ca5922d03066040a1d1a96f22b50}} 
+\index{gpio.\+c@{gpio.\+c}!gpio\+\_\+init\+\_\+pin@{gpio\+\_\+init\+\_\+pin}}
+\index{gpio\+\_\+init\+\_\+pin@{gpio\+\_\+init\+\_\+pin}!gpio.\+c@{gpio.\+c}}
+\subsubsection{\texorpdfstring{gpio\+\_\+init\+\_\+pin()}{gpio\_init\_pin()}}
+{\footnotesize\ttfamily void gpio\+\_\+init\+\_\+pin (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port,  }\item[{uint32\+\_\+t}]{pin,  }\item[{\hyperlink{gpio_8h_a4ce7befa70373167bad76d2d332bd457}{pin\+Mode\+Type}}]{mode }\end{DoxyParamCaption})}
+
+
+
+$<$libopencm3 G\+P\+IO functions 
+
+$<$G\+P\+IO Header $<$libopencm3 R\+CC functions Initialize a given G\+P\+IO pin. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em port} & -\/ G\+P\+IO block port to be started \\
+\hline
+\mbox{\tt in}  & {\em pin} & -\/ G\+P\+IO pin to be started \\
+\hline
+\mbox{\tt in}  & {\em mode} & -\/ How will the pin be initialized $<$I\+N\+P\+U\+T/\+O\+U\+T\+P\+UT$>$ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{gpio_8c_a1af626a71fd9a5c7e59c250815067f31}\label{gpio_8c_a1af626a71fd9a5c7e59c250815067f31}} 
+\index{gpio.\+c@{gpio.\+c}!gpio\+\_\+pin\+\_\+reset@{gpio\+\_\+pin\+\_\+reset}}
+\index{gpio\+\_\+pin\+\_\+reset@{gpio\+\_\+pin\+\_\+reset}!gpio.\+c@{gpio.\+c}}
+\subsubsection{\texorpdfstring{gpio\+\_\+pin\+\_\+reset()}{gpio\_pin\_reset()}}
+{\footnotesize\ttfamily void gpio\+\_\+pin\+\_\+reset (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port,  }\item[{uint32\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Clear a given G\+P\+IO pin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em port} & -\/ G\+P\+IO block port. \\
+\hline
+\mbox{\tt in}  & {\em pin} & -\/ G\+P\+IO pin port. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{gpio_8c_a23cdd4156dd0a9e343f6cc7e9396d6a2}\label{gpio_8c_a23cdd4156dd0a9e343f6cc7e9396d6a2}} 
+\index{gpio.\+c@{gpio.\+c}!gpio\+\_\+pin\+\_\+set@{gpio\+\_\+pin\+\_\+set}}
+\index{gpio\+\_\+pin\+\_\+set@{gpio\+\_\+pin\+\_\+set}!gpio.\+c@{gpio.\+c}}
+\subsubsection{\texorpdfstring{gpio\+\_\+pin\+\_\+set()}{gpio\_pin\_set()}}
+{\footnotesize\ttfamily void gpio\+\_\+pin\+\_\+set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port,  }\item[{uint32\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Set a given G\+P\+IO pin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em port} & -\/ G\+P\+IO block port. \\
+\hline
+\mbox{\tt in}  & {\em pin} & -\/ G\+P\+IO pin port. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{gpio_8c_ae43fe46d3907010a51432bb0fb10bc08}\label{gpio_8c_ae43fe46d3907010a51432bb0fb10bc08}} 
+\index{gpio.\+c@{gpio.\+c}!gpio\+\_\+pin\+\_\+toggle@{gpio\+\_\+pin\+\_\+toggle}}
+\index{gpio\+\_\+pin\+\_\+toggle@{gpio\+\_\+pin\+\_\+toggle}!gpio.\+c@{gpio.\+c}}
+\subsubsection{\texorpdfstring{gpio\+\_\+pin\+\_\+toggle()}{gpio\_pin\_toggle()}}
+{\footnotesize\ttfamily void gpio\+\_\+pin\+\_\+toggle (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{port,  }\item[{uint32\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Toggle a given G\+P\+IO pin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em port} & -\/ G\+P\+IO block port. \\
+\hline
+\mbox{\tt in}  & {\em pin} & -\/ G\+P\+IO pin port. \\
+\hline
+\end{DoxyParams}

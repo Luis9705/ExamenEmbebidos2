@@ -1,5 +1,5 @@
 /// @file gpio.c
-
+/// @brief GPIO function definitions.
 #include "gpio.h"                       ///<GPIO Header
 #include <libopencm3/stm32/rcc.h>       ///<libopencm3 RCC functions
 #include <libopencm3/stm32/gpio.h>      ///<libopencm3 GPIO functions
@@ -25,7 +25,7 @@ void gpio_init_pin(uint32_t port, uint32_t pin, pinModeType mode){
  * @brief Returns the pin status when called.
  * @param[in] port - GPIO block port.
  * @param[in] pin - GPIO pin port.
- * @param[out] pinStatus - Status of the given GPIO pin.
+ * @return pinStatus - Status of the given GPIO pin.
  */ 
 pinStatusType gpio_get_pin_status(uint32_t port, uint32_t pin){
     uint16_t status = gpio_get(port, pin);

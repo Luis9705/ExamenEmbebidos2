@@ -1,4 +1,5 @@
 /// @file delay.c
+/// @brief delay functions definitions.
 #include "delay.h"
 #include "../system_common/system_common.h"
 #include <libopencm3/stm32/timer.h> 

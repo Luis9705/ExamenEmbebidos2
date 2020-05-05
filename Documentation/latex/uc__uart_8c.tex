@@ -1,0 +1,148 @@
+\hypertarget{uc__uart_8c}{}\section{/home/jonacb/stm32/\+Examen\+Embebidos2/uc\+\_\+uart/uc\+\_\+uart.c File Reference}
+\label{uc__uart_8c}\index{/home/jonacb/stm32/\+Examen\+Embebidos2/uc\+\_\+uart/uc\+\_\+uart.\+c@{/home/jonacb/stm32/\+Examen\+Embebidos2/uc\+\_\+uart/uc\+\_\+uart.\+c}}
+
+
+uc\+\_\+uart function definitions.  
+
+
+{\ttfamily \#include \char`\"{}uc\+\_\+uart.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$libopencm3/stm32/usart.\+h$>$}\newline
+{\ttfamily \#include $<$libopencm3/cm3/nvic.\+h$>$}\newline
+{\ttfamily \#include $<$libopencm3/stm32/rcc.\+h$>$}\newline
+{\ttfamily \#include $<$libopencm3/stm32/gpio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../miniprintf/miniprintf.\+h\char`\"{}}\newline
+Include dependency graph for uc\+\_\+uart.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uc__uart_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{uc__uart_8c_ae468e0937557eefb10705cec62e1599b}{uart\+\_\+putc} (char ch)
+\begin{DoxyCompactList}\small\item\em Sends a char. \end{DoxyCompactList}\item 
+int \hyperlink{uc__uart_8c_a953fcdef2bec3905b52c22983a8567eb}{uart\+\_\+printf} (const char $\ast$format,...)
+\begin{DoxyCompactList}\small\item\em Prints U\+A\+RT message. \end{DoxyCompactList}\item 
+void \hyperlink{uc__uart_8c_a4c32397c8b24d1f414bb4ace805c795e}{uart\+\_\+pin\+\_\+setup} (uint32\+\_\+t tx\+\_\+port, uint32\+\_\+t tx\+\_\+pin, uint32\+\_\+t rx\+\_\+port, uint32\+\_\+t rx\+\_\+pin)
+\begin{DoxyCompactList}\small\item\em Sets up the U\+A\+RT peripheral pin ports needed. \end{DoxyCompactList}\item 
+void \hyperlink{uc__uart_8c_a65773aa4e29491601b9ec336332fb8c4}{uart\+\_\+setup} (uint32\+\_\+t uart, uint32\+\_\+t baudrate, uint32\+\_\+t databits)
+\begin{DoxyCompactList}\small\item\em Sets up the U\+A\+RT configuration. \end{DoxyCompactList}\item 
+void \hyperlink{uc__uart_8c_a4b03985035c306b5819e23671abfe049}{uart\+\_\+start} (uint32\+\_\+t uart)
+\begin{DoxyCompactList}\small\item\em Starts U\+A\+RT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{uc__uart_8c_a206ca77a1a1fcafd37f2e07532397bdc}{current\+\_\+uart}
+\begin{DoxyCompactList}\small\item\em $<$Miniprint library include. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+uc\+\_\+uart function definitions. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{uc__uart_8c_a4c32397c8b24d1f414bb4ace805c795e}\label{uc__uart_8c_a4c32397c8b24d1f414bb4ace805c795e}} 
+\index{uc\+\_\+uart.\+c@{uc\+\_\+uart.\+c}!uart\+\_\+pin\+\_\+setup@{uart\+\_\+pin\+\_\+setup}}
+\index{uart\+\_\+pin\+\_\+setup@{uart\+\_\+pin\+\_\+setup}!uc\+\_\+uart.\+c@{uc\+\_\+uart.\+c}}
+\subsubsection{\texorpdfstring{uart\+\_\+pin\+\_\+setup()}{uart\_pin\_setup()}}
+{\footnotesize\ttfamily void uart\+\_\+pin\+\_\+setup (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tx\+\_\+port,  }\item[{uint32\+\_\+t}]{tx\+\_\+pin,  }\item[{uint32\+\_\+t}]{rx\+\_\+port,  }\item[{uint32\+\_\+t}]{rx\+\_\+pin }\end{DoxyParamCaption})}
+
+
+
+Sets up the U\+A\+RT peripheral pin ports needed. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em tx\+\_\+port} & Specifies the port of the U\+A\+RT transmitter. \\
+\hline
+\mbox{\tt in}  & {\em tx\+\_\+pin} & Specifies the pin of the U\+A\+RT transmitter. \\
+\hline
+\mbox{\tt in}  & {\em rx\+\_\+port} & Specifies the port of the U\+A\+RT receiver. \\
+\hline
+\mbox{\tt in}  & {\em rx\+\_\+pin} & Specifies the pin of the U\+A\+RT receiver. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{uc__uart_8c_a953fcdef2bec3905b52c22983a8567eb}\label{uc__uart_8c_a953fcdef2bec3905b52c22983a8567eb}} 
+\index{uc\+\_\+uart.\+c@{uc\+\_\+uart.\+c}!uart\+\_\+printf@{uart\+\_\+printf}}
+\index{uart\+\_\+printf@{uart\+\_\+printf}!uc\+\_\+uart.\+c@{uc\+\_\+uart.\+c}}
+\subsubsection{\texorpdfstring{uart\+\_\+printf()}{uart\_printf()}}
+{\footnotesize\ttfamily int uart\+\_\+printf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Prints U\+A\+RT message. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em format} & String format. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rc 
+\end{DoxyReturn}
+\mbox{\Hypertarget{uc__uart_8c_ae468e0937557eefb10705cec62e1599b}\label{uc__uart_8c_ae468e0937557eefb10705cec62e1599b}} 
+\index{uc\+\_\+uart.\+c@{uc\+\_\+uart.\+c}!uart\+\_\+putc@{uart\+\_\+putc}}
+\index{uart\+\_\+putc@{uart\+\_\+putc}!uc\+\_\+uart.\+c@{uc\+\_\+uart.\+c}}
+\subsubsection{\texorpdfstring{uart\+\_\+putc()}{uart\_putc()}}
+{\footnotesize\ttfamily void uart\+\_\+putc (\begin{DoxyParamCaption}\item[{char}]{ch }\end{DoxyParamCaption})}
+
+
+
+Sends a char. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ch} & Char to be transmitted. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{uc__uart_8c_a65773aa4e29491601b9ec336332fb8c4}\label{uc__uart_8c_a65773aa4e29491601b9ec336332fb8c4}} 
+\index{uc\+\_\+uart.\+c@{uc\+\_\+uart.\+c}!uart\+\_\+setup@{uart\+\_\+setup}}
+\index{uart\+\_\+setup@{uart\+\_\+setup}!uc\+\_\+uart.\+c@{uc\+\_\+uart.\+c}}
+\subsubsection{\texorpdfstring{uart\+\_\+setup()}{uart\_setup()}}
+{\footnotesize\ttfamily void uart\+\_\+setup (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{uart,  }\item[{uint32\+\_\+t}]{baudrate,  }\item[{uint32\+\_\+t}]{databits }\end{DoxyParamCaption})}
+
+
+
+Sets up the U\+A\+RT configuration. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em uart} & U\+A\+RT to be used. \\
+\hline
+\mbox{\tt in}  & {\em baudrate} & Baudrate used for U\+A\+RT communication. \\
+\hline
+\mbox{\tt in}  & {\em databits} & Message data width. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{uc__uart_8c_a4b03985035c306b5819e23671abfe049}\label{uc__uart_8c_a4b03985035c306b5819e23671abfe049}} 
+\index{uc\+\_\+uart.\+c@{uc\+\_\+uart.\+c}!uart\+\_\+start@{uart\+\_\+start}}
+\index{uart\+\_\+start@{uart\+\_\+start}!uc\+\_\+uart.\+c@{uc\+\_\+uart.\+c}}
+\subsubsection{\texorpdfstring{uart\+\_\+start()}{uart\_start()}}
+{\footnotesize\ttfamily void uart\+\_\+start (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{uart }\end{DoxyParamCaption})}
+
+
+
+Starts U\+A\+RT. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em uart} & U\+A\+RT to be used. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{uc__uart_8c_a206ca77a1a1fcafd37f2e07532397bdc}\label{uc__uart_8c_a206ca77a1a1fcafd37f2e07532397bdc}} 
+\index{uc\+\_\+uart.\+c@{uc\+\_\+uart.\+c}!current\+\_\+uart@{current\+\_\+uart}}
+\index{current\+\_\+uart@{current\+\_\+uart}!uc\+\_\+uart.\+c@{uc\+\_\+uart.\+c}}
+\subsubsection{\texorpdfstring{current\+\_\+uart}{current\_uart}}
+{\footnotesize\ttfamily uint32\+\_\+t current\+\_\+uart}
+
+
+
+$<$Miniprint library include. 
+
+$<$U\+A\+RT custom defines. $<$libopencm3 U\+S\+A\+RT functions. $<$libopencm3 N\+V\+IC functions. $<$libopencm3 R\+CC functions. $<$libopencm3 G\+P\+IO functions.\+Currently used U\+A\+RT. 

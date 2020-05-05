@@ -1,0 +1,53 @@
+\hypertarget{miniprintf_8h}{}\section{/home/jonacb/stm32/\+Examen\+Embebidos2/miniprintf/miniprintf.h File Reference}
+\label{miniprintf_8h}\index{/home/jonacb/stm32/\+Examen\+Embebidos2/miniprintf/miniprintf.\+h@{/home/jonacb/stm32/\+Examen\+Embebidos2/miniprintf/miniprintf.\+h}}
+
+
+miniprintf header file.  
+
+
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+Include dependency graph for miniprintf.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{miniprintf_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{miniprintf_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{miniprintf_8h_a5bcf7f52ea6b2478c0ffb19d2ce4e5e5}{mini\+\_\+vprintf\+\_\+cooked} (void($\ast$putc)(char), const char $\ast$format, va\+\_\+list args)
+\item 
+int \hyperlink{miniprintf_8h_a1a532af594af9bb55f27718b227f5ccc}{mini\+\_\+vprintf\+\_\+uncooked} (void($\ast$putc)(char), const char $\ast$format, va\+\_\+list args)
+\item 
+\mbox{\Hypertarget{miniprintf_8h_aa3240298d52485708c33f9bc9afad641}\label{miniprintf_8h_aa3240298d52485708c33f9bc9afad641}} 
+int {\bfseries mini\+\_\+snprintf} (char $\ast$buf, unsigned maxbuf, const char $\ast$format,...) \+\_\+\+\_\+attribute((format(printf
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+miniprintf header file. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{miniprintf_8h_a5bcf7f52ea6b2478c0ffb19d2ce4e5e5}\label{miniprintf_8h_a5bcf7f52ea6b2478c0ffb19d2ce4e5e5}} 
+\index{miniprintf.\+h@{miniprintf.\+h}!mini\+\_\+vprintf\+\_\+cooked@{mini\+\_\+vprintf\+\_\+cooked}}
+\index{mini\+\_\+vprintf\+\_\+cooked@{mini\+\_\+vprintf\+\_\+cooked}!miniprintf.\+h@{miniprintf.\+h}}
+\subsubsection{\texorpdfstring{mini\+\_\+vprintf\+\_\+cooked()}{mini\_vprintf\_cooked()}}
+{\footnotesize\ttfamily int mini\+\_\+vprintf\+\_\+cooked (\begin{DoxyParamCaption}\item[{void($\ast$)(char)}]{putc,  }\item[{const char $\ast$}]{format,  }\item[{va\+\_\+list}]{args }\end{DoxyParamCaption})}
+
+External\+: Perform cooked mode printf() \mbox{\Hypertarget{miniprintf_8h_a1a532af594af9bb55f27718b227f5ccc}\label{miniprintf_8h_a1a532af594af9bb55f27718b227f5ccc}} 
+\index{miniprintf.\+h@{miniprintf.\+h}!mini\+\_\+vprintf\+\_\+uncooked@{mini\+\_\+vprintf\+\_\+uncooked}}
+\index{mini\+\_\+vprintf\+\_\+uncooked@{mini\+\_\+vprintf\+\_\+uncooked}!miniprintf.\+h@{miniprintf.\+h}}
+\subsubsection{\texorpdfstring{mini\+\_\+vprintf\+\_\+uncooked()}{mini\_vprintf\_uncooked()}}
+{\footnotesize\ttfamily int mini\+\_\+vprintf\+\_\+uncooked (\begin{DoxyParamCaption}\item[{void($\ast$)(char)}]{putc,  }\item[{const char $\ast$}]{format,  }\item[{va\+\_\+list}]{args }\end{DoxyParamCaption})}
+
+External\+: Perform uncooked (as is) printf() 

@@ -1,28 +1,27 @@
 /// @file main.c
+/// @brief Main code for this project.
 //  Copyright 2020 Copyright Equipo 2
 
+#include "system_common/system_common.h" ///<System common defines.
+#include "timer/timer.h" ///<Timer header file include.
+#include "delay/delay.h" ///<Delay header file include.
+#include "print/print.h" ///<Print header file include.
+#include "buttons/buttons.h" ///<Button header file include.
+#include "led/led.h" ///<LED header file include.
 
-#include "system_common/system_common.h"
-#include "timer/timer.h"
-#include "delay/delay.h"
-#include "print/print.h"
-#include "buttons/buttons.h"
-#include "led/led.h"
-
-
+/// Enum class defining the timer status. 
 typedef enum  {
-  OFF,
-  RUNNING,
-  PAUSED
+  OFF,  ///<Timer is off.
+  RUNNING,  ///<Timer is running.
+  PAUSED   ///<Timer is paused.
 } timerStatusType;
 
+timerStatusType timer_status = OFF; ///<Timer default status.
 
-timerStatusType timer_status = OFF;
-
-
+/**
+ * @brief Main function.
+ */
 int main(void)  {
-
-
     system_clock_setup();
     buttons_setup();
     led_setup();
@@ -30,9 +29,7 @@ int main(void)  {
     print_setup();
     timer_setup();
 
-
     for (;;)  {
-
         if(reset_button_pressed()){
             timer_rst();
             print("Timer Reset.\n");
@@ -70,7 +67,6 @@ int main(void)  {
         }
 
     }
-
     return 0;
 }
 

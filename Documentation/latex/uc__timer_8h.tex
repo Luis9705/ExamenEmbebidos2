@@ -1,0 +1,194 @@
+\hypertarget{uc__timer_8h}{}\section{/home/jonacb/stm32/\+Examen\+Embebidos2/uc\+\_\+timer/uc\+\_\+timer.h File Reference}
+\label{uc__timer_8h}\index{/home/jonacb/stm32/\+Examen\+Embebidos2/uc\+\_\+timer/uc\+\_\+timer.\+h@{/home/jonacb/stm32/\+Examen\+Embebidos2/uc\+\_\+timer/uc\+\_\+timer.\+h}}
+
+
+uc\+\_\+timer header file.  
+
+
+{\ttfamily \#include $<$libopencm3/stm32/timer.\+h$>$}\newline
+{\ttfamily \#include $<$libopencm3/cm3/nvic.\+h$>$}\newline
+{\ttfamily \#include $<$libopencm3/stm32/rcc.\+h$>$}\newline
+{\ttfamily \#include $<$libopencm3/stm32/gpio.\+h$>$}\newline
+Include dependency graph for uc\+\_\+timer.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uc__timer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uc__timer_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{uc__timer_8h_a58293981ed0469d0d2b0cc0e70beecce}{uc\+\_\+timer\+\_\+pwm\+\_\+pin\+\_\+setup} (enum rcc\+\_\+periph\+\_\+clken gpio\+\_\+clk, uint32\+\_\+t gpio\+\_\+port, uint16\+\_\+t gpio\+\_\+pin)
+\begin{DoxyCompactList}\small\item\em Sets up the P\+WM peripheral pin ports needed. \end{DoxyCompactList}\item 
+void \hyperlink{uc__timer_8h_aa32fe1c6f887bf184010424db5634198}{uc\+\_\+timer\+\_\+setup} (enum rcc\+\_\+periph\+\_\+clken timer\+\_\+clk, uint32\+\_\+t timer, uint32\+\_\+t prescaler)
+\begin{DoxyCompactList}\small\item\em Sets up the timer prescaler and enabled the clock. \end{DoxyCompactList}\item 
+void \hyperlink{uc__timer_8h_a3783dcda7914f2a5113a276bbb6d886d}{uc\+\_\+timer\+\_\+pwm\+\_\+setup} (enum rcc\+\_\+periph\+\_\+clken timer\+\_\+clk, uint32\+\_\+t timer, enum tim\+\_\+oc\+\_\+id channel, uint32\+\_\+t prescaler)
+\begin{DoxyCompactList}\small\item\em Enables and sets up the timer\textquotesingle{}s pwm. \end{DoxyCompactList}\item 
+void \hyperlink{uc__timer_8h_a5ace3c51af58c627a2448d7af70f170f}{uc\+\_\+timer\+\_\+config\+\_\+period} (uint32\+\_\+t timer, uint32\+\_\+t period)
+\begin{DoxyCompactList}\small\item\em Configures the timer\textquotesingle{}s period. \end{DoxyCompactList}\item 
+void \hyperlink{uc__timer_8h_a1ca803f1f79b91d0fa7622bf5161b94e}{uc\+\_\+timer\+\_\+pwm\+\_\+config\+\_\+duty\+\_\+cycle} (uint32\+\_\+t timer, enum tim\+\_\+oc\+\_\+id channel, uint32\+\_\+t duty\+\_\+cycle)
+\begin{DoxyCompactList}\small\item\em Configures the timer\textquotesingle{}s pwm duty cycle. \end{DoxyCompactList}\item 
+void \hyperlink{uc__timer_8h_ac1f3c225897cfdee7111bcf69ffd0222}{uc\+\_\+timer\+\_\+enable\+\_\+interrupt} (uint32\+\_\+t timer, uint8\+\_\+t irqn)
+\begin{DoxyCompactList}\small\item\em Enables timer\textquotesingle{}s interrupt. \end{DoxyCompactList}\item 
+void \hyperlink{uc__timer_8h_a4962fd7b57586816079db0aa487091d3}{uc\+\_\+timer\+\_\+start} (uint32\+\_\+t timer)
+\begin{DoxyCompactList}\small\item\em Starts the timer. \end{DoxyCompactList}\item 
+void \hyperlink{uc__timer_8h_ab7c0468c8d4fc8bf514ada5ee90671e5}{uc\+\_\+timer\+\_\+stop} (uint32\+\_\+t timer)
+\begin{DoxyCompactList}\small\item\em Stops the timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+uc\+\_\+timer header file. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{uc__timer_8h_a5ace3c51af58c627a2448d7af70f170f}\label{uc__timer_8h_a5ace3c51af58c627a2448d7af70f170f}} 
+\index{uc\+\_\+timer.\+h@{uc\+\_\+timer.\+h}!uc\+\_\+timer\+\_\+config\+\_\+period@{uc\+\_\+timer\+\_\+config\+\_\+period}}
+\index{uc\+\_\+timer\+\_\+config\+\_\+period@{uc\+\_\+timer\+\_\+config\+\_\+period}!uc\+\_\+timer.\+h@{uc\+\_\+timer.\+h}}
+\subsubsection{\texorpdfstring{uc\+\_\+timer\+\_\+config\+\_\+period()}{uc\_timer\_config\_period()}}
+{\footnotesize\ttfamily void uc\+\_\+timer\+\_\+config\+\_\+period (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{timer,  }\item[{uint32\+\_\+t}]{period }\end{DoxyParamCaption})}
+
+
+
+Configures the timer\textquotesingle{}s period. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em timer} & \\
+\hline
+\mbox{\tt in}  & {\em period} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{uc__timer_8h_ac1f3c225897cfdee7111bcf69ffd0222}\label{uc__timer_8h_ac1f3c225897cfdee7111bcf69ffd0222}} 
+\index{uc\+\_\+timer.\+h@{uc\+\_\+timer.\+h}!uc\+\_\+timer\+\_\+enable\+\_\+interrupt@{uc\+\_\+timer\+\_\+enable\+\_\+interrupt}}
+\index{uc\+\_\+timer\+\_\+enable\+\_\+interrupt@{uc\+\_\+timer\+\_\+enable\+\_\+interrupt}!uc\+\_\+timer.\+h@{uc\+\_\+timer.\+h}}
+\subsubsection{\texorpdfstring{uc\+\_\+timer\+\_\+enable\+\_\+interrupt()}{uc\_timer\_enable\_interrupt()}}
+{\footnotesize\ttfamily void uc\+\_\+timer\+\_\+enable\+\_\+interrupt (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{timer,  }\item[{uint8\+\_\+t}]{irqn }\end{DoxyParamCaption})}
+
+
+
+Enables timer\textquotesingle{}s interrupt. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em timer} & Timer used. \\
+\hline
+\mbox{\tt in}  & {\em irqn} & Timer Interrupt Service Request to be enabled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{uc__timer_8h_a1ca803f1f79b91d0fa7622bf5161b94e}\label{uc__timer_8h_a1ca803f1f79b91d0fa7622bf5161b94e}} 
+\index{uc\+\_\+timer.\+h@{uc\+\_\+timer.\+h}!uc\+\_\+timer\+\_\+pwm\+\_\+config\+\_\+duty\+\_\+cycle@{uc\+\_\+timer\+\_\+pwm\+\_\+config\+\_\+duty\+\_\+cycle}}
+\index{uc\+\_\+timer\+\_\+pwm\+\_\+config\+\_\+duty\+\_\+cycle@{uc\+\_\+timer\+\_\+pwm\+\_\+config\+\_\+duty\+\_\+cycle}!uc\+\_\+timer.\+h@{uc\+\_\+timer.\+h}}
+\subsubsection{\texorpdfstring{uc\+\_\+timer\+\_\+pwm\+\_\+config\+\_\+duty\+\_\+cycle()}{uc\_timer\_pwm\_config\_duty\_cycle()}}
+{\footnotesize\ttfamily void uc\+\_\+timer\+\_\+pwm\+\_\+config\+\_\+duty\+\_\+cycle (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{timer,  }\item[{enum tim\+\_\+oc\+\_\+id}]{channel,  }\item[{uint32\+\_\+t}]{duty\+\_\+cycle }\end{DoxyParamCaption})}
+
+
+
+Configures the timer\textquotesingle{}s pwm duty cycle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em timer} & Timer used. \\
+\hline
+\mbox{\tt in}  & {\em channel} & Timer channel. \\
+\hline
+\mbox{\tt in}  & {\em duty\+\_\+cycle} & States the duty cycle of the timer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{uc__timer_8h_a58293981ed0469d0d2b0cc0e70beecce}\label{uc__timer_8h_a58293981ed0469d0d2b0cc0e70beecce}} 
+\index{uc\+\_\+timer.\+h@{uc\+\_\+timer.\+h}!uc\+\_\+timer\+\_\+pwm\+\_\+pin\+\_\+setup@{uc\+\_\+timer\+\_\+pwm\+\_\+pin\+\_\+setup}}
+\index{uc\+\_\+timer\+\_\+pwm\+\_\+pin\+\_\+setup@{uc\+\_\+timer\+\_\+pwm\+\_\+pin\+\_\+setup}!uc\+\_\+timer.\+h@{uc\+\_\+timer.\+h}}
+\subsubsection{\texorpdfstring{uc\+\_\+timer\+\_\+pwm\+\_\+pin\+\_\+setup()}{uc\_timer\_pwm\_pin\_setup()}}
+{\footnotesize\ttfamily void uc\+\_\+timer\+\_\+pwm\+\_\+pin\+\_\+setup (\begin{DoxyParamCaption}\item[{enum rcc\+\_\+periph\+\_\+clken}]{gpio\+\_\+clk,  }\item[{uint32\+\_\+t}]{gpio\+\_\+port,  }\item[{uint16\+\_\+t}]{gpio\+\_\+pin }\end{DoxyParamCaption})}
+
+
+
+Sets up the P\+WM peripheral pin ports needed. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em gpio\+\_\+clk} & \\
+\hline
+\mbox{\tt in}  & {\em gpio\+\_\+port} & \\
+\hline
+\mbox{\tt in}  & {\em gpio\+\_\+pin} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{uc__timer_8h_a3783dcda7914f2a5113a276bbb6d886d}\label{uc__timer_8h_a3783dcda7914f2a5113a276bbb6d886d}} 
+\index{uc\+\_\+timer.\+h@{uc\+\_\+timer.\+h}!uc\+\_\+timer\+\_\+pwm\+\_\+setup@{uc\+\_\+timer\+\_\+pwm\+\_\+setup}}
+\index{uc\+\_\+timer\+\_\+pwm\+\_\+setup@{uc\+\_\+timer\+\_\+pwm\+\_\+setup}!uc\+\_\+timer.\+h@{uc\+\_\+timer.\+h}}
+\subsubsection{\texorpdfstring{uc\+\_\+timer\+\_\+pwm\+\_\+setup()}{uc\_timer\_pwm\_setup()}}
+{\footnotesize\ttfamily void uc\+\_\+timer\+\_\+pwm\+\_\+setup (\begin{DoxyParamCaption}\item[{enum rcc\+\_\+periph\+\_\+clken}]{timer\+\_\+clk,  }\item[{uint32\+\_\+t}]{timer,  }\item[{enum tim\+\_\+oc\+\_\+id}]{channel,  }\item[{uint32\+\_\+t}]{prescaler }\end{DoxyParamCaption})}
+
+
+
+Enables and sets up the timer\textquotesingle{}s pwm. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em timer\+\_\+clk} & \\
+\hline
+\mbox{\tt in}  & {\em timer} & \\
+\hline
+\mbox{\tt in}  & {\em channel} & \\
+\hline
+\mbox{\tt in}  & {\em prescaler} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{uc__timer_8h_aa32fe1c6f887bf184010424db5634198}\label{uc__timer_8h_aa32fe1c6f887bf184010424db5634198}} 
+\index{uc\+\_\+timer.\+h@{uc\+\_\+timer.\+h}!uc\+\_\+timer\+\_\+setup@{uc\+\_\+timer\+\_\+setup}}
+\index{uc\+\_\+timer\+\_\+setup@{uc\+\_\+timer\+\_\+setup}!uc\+\_\+timer.\+h@{uc\+\_\+timer.\+h}}
+\subsubsection{\texorpdfstring{uc\+\_\+timer\+\_\+setup()}{uc\_timer\_setup()}}
+{\footnotesize\ttfamily void uc\+\_\+timer\+\_\+setup (\begin{DoxyParamCaption}\item[{enum rcc\+\_\+periph\+\_\+clken}]{timer\+\_\+clk,  }\item[{uint32\+\_\+t}]{timer,  }\item[{uint32\+\_\+t}]{prescaler }\end{DoxyParamCaption})}
+
+
+
+Sets up the timer prescaler and enabled the clock. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em timer\+\_\+clk} & \\
+\hline
+\mbox{\tt in}  & {\em timer} & \\
+\hline
+\mbox{\tt in}  & {\em prescaler} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{uc__timer_8h_a4962fd7b57586816079db0aa487091d3}\label{uc__timer_8h_a4962fd7b57586816079db0aa487091d3}} 
+\index{uc\+\_\+timer.\+h@{uc\+\_\+timer.\+h}!uc\+\_\+timer\+\_\+start@{uc\+\_\+timer\+\_\+start}}
+\index{uc\+\_\+timer\+\_\+start@{uc\+\_\+timer\+\_\+start}!uc\+\_\+timer.\+h@{uc\+\_\+timer.\+h}}
+\subsubsection{\texorpdfstring{uc\+\_\+timer\+\_\+start()}{uc\_timer\_start()}}
+{\footnotesize\ttfamily void uc\+\_\+timer\+\_\+start (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{timer }\end{DoxyParamCaption})}
+
+
+
+Starts the timer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em timer} & Timer used. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{uc__timer_8h_ab7c0468c8d4fc8bf514ada5ee90671e5}\label{uc__timer_8h_ab7c0468c8d4fc8bf514ada5ee90671e5}} 
+\index{uc\+\_\+timer.\+h@{uc\+\_\+timer.\+h}!uc\+\_\+timer\+\_\+stop@{uc\+\_\+timer\+\_\+stop}}
+\index{uc\+\_\+timer\+\_\+stop@{uc\+\_\+timer\+\_\+stop}!uc\+\_\+timer.\+h@{uc\+\_\+timer.\+h}}
+\subsubsection{\texorpdfstring{uc\+\_\+timer\+\_\+stop()}{uc\_timer\_stop()}}
+{\footnotesize\ttfamily void uc\+\_\+timer\+\_\+stop (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{timer }\end{DoxyParamCaption})}
+
+
+
+Stops the timer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em timer} & Timer used. \\
+\hline
+\end{DoxyParams}

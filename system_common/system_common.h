@@ -1,11 +1,13 @@
+///@file system_common.h
+/// @brief system_common header file.
 //  Copyright 2020 Copyright Equipo 2
 #ifndef SYSTEM_COMMON_H_   /* Include guard */
 #define SYSTEM_COMMON_H_
 
 #include <libopencm3/stm32/rcc.h>
 
-//#define F_CLK 24000000  ///  <Clock constant define
-#define F_CLK 72000000  ///  <Clock constant define
+//#define F_CLK 24000000  ///<Clock constant define
+#define F_CLK 72000000  ///<Clock constant define
 
 void system_clock_setup(void);
 

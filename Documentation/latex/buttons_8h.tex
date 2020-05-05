@@ -1,0 +1,92 @@
+\hypertarget{buttons_8h}{}\section{/home/jonacb/stm32/\+Examen\+Embebidos2/buttons/buttons.h File Reference}
+\label{buttons_8h}\index{/home/jonacb/stm32/\+Examen\+Embebidos2/buttons/buttons.\+h@{/home/jonacb/stm32/\+Examen\+Embebidos2/buttons/buttons.\+h}}
+
+
+Button header file.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}buttons\+\_\+params.\+h\char`\"{}}\newline
+Include dependency graph for buttons.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{buttons_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{buttons_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{buttons_8h_a58f9788bfb584a5b915ffff18d3bc410}{buttons\+\_\+setup} (void)
+\begin{DoxyCompactList}\small\item\em Sets up the buttons needed for this project. \end{DoxyCompactList}\item 
+bool \hyperlink{buttons_8h_a096706e90277a8acaccd45febdc3371c}{reset\+\_\+button\+\_\+pressed} (void)
+\begin{DoxyCompactList}\small\item\em Returns whether the reset button is pressed. \end{DoxyCompactList}\item 
+bool \hyperlink{buttons_8h_a1af30191280bf4afc129021651902ff7}{start\+\_\+button\+\_\+pressed} (void)
+\begin{DoxyCompactList}\small\item\em Returns whether the start button is pressed. \end{DoxyCompactList}\item 
+bool \hyperlink{buttons_8h_ae1caa49be6beb3becba7b993589aaf32}{stop\+\_\+button\+\_\+pressed} (void)
+\begin{DoxyCompactList}\small\item\em Returns whether the stop button is pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Button header file. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{buttons_8h_a58f9788bfb584a5b915ffff18d3bc410}\label{buttons_8h_a58f9788bfb584a5b915ffff18d3bc410}} 
+\index{buttons.\+h@{buttons.\+h}!buttons\+\_\+setup@{buttons\+\_\+setup}}
+\index{buttons\+\_\+setup@{buttons\+\_\+setup}!buttons.\+h@{buttons.\+h}}
+\subsubsection{\texorpdfstring{buttons\+\_\+setup()}{buttons\_setup()}}
+{\footnotesize\ttfamily void buttons\+\_\+setup (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Sets up the buttons needed for this project. 
+
+$<$stdint library. stdbool library. button\+\_\+params header file. \mbox{\Hypertarget{buttons_8h_a096706e90277a8acaccd45febdc3371c}\label{buttons_8h_a096706e90277a8acaccd45febdc3371c}} 
+\index{buttons.\+h@{buttons.\+h}!reset\+\_\+button\+\_\+pressed@{reset\+\_\+button\+\_\+pressed}}
+\index{reset\+\_\+button\+\_\+pressed@{reset\+\_\+button\+\_\+pressed}!buttons.\+h@{buttons.\+h}}
+\subsubsection{\texorpdfstring{reset\+\_\+button\+\_\+pressed()}{reset\_button\_pressed()}}
+{\footnotesize\ttfamily bool reset\+\_\+button\+\_\+pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns whether the reset button is pressed. 
+
+\begin{DoxyReturn}{Returns}
+reset\+\_\+button\+\_\+status 
+\end{DoxyReturn}
+\mbox{\Hypertarget{buttons_8h_a1af30191280bf4afc129021651902ff7}\label{buttons_8h_a1af30191280bf4afc129021651902ff7}} 
+\index{buttons.\+h@{buttons.\+h}!start\+\_\+button\+\_\+pressed@{start\+\_\+button\+\_\+pressed}}
+\index{start\+\_\+button\+\_\+pressed@{start\+\_\+button\+\_\+pressed}!buttons.\+h@{buttons.\+h}}
+\subsubsection{\texorpdfstring{start\+\_\+button\+\_\+pressed()}{start\_button\_pressed()}}
+{\footnotesize\ttfamily bool start\+\_\+button\+\_\+pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns whether the start button is pressed. 
+
+\begin{DoxyReturn}{Returns}
+start\+\_\+button\+\_\+status 
+\end{DoxyReturn}
+\mbox{\Hypertarget{buttons_8h_ae1caa49be6beb3becba7b993589aaf32}\label{buttons_8h_ae1caa49be6beb3becba7b993589aaf32}} 
+\index{buttons.\+h@{buttons.\+h}!stop\+\_\+button\+\_\+pressed@{stop\+\_\+button\+\_\+pressed}}
+\index{stop\+\_\+button\+\_\+pressed@{stop\+\_\+button\+\_\+pressed}!buttons.\+h@{buttons.\+h}}
+\subsubsection{\texorpdfstring{stop\+\_\+button\+\_\+pressed()}{stop\_button\_pressed()}}
+{\footnotesize\ttfamily bool stop\+\_\+button\+\_\+pressed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns whether the stop button is pressed. 
+
+\begin{DoxyReturn}{Returns}
+stop\+\_\+button\+\_\+status 
+\end{DoxyReturn}

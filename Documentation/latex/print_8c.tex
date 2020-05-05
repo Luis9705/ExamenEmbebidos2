@@ -1,0 +1,60 @@
+\hypertarget{print_8c}{}\section{/home/jonacb/stm32/\+Examen\+Embebidos2/print/print.c File Reference}
+\label{print_8c}\index{/home/jonacb/stm32/\+Examen\+Embebidos2/print/print.\+c@{/home/jonacb/stm32/\+Examen\+Embebidos2/print/print.\+c}}
+
+
+Print functions definitions.  
+
+
+{\ttfamily \#include \char`\"{}print.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../uc\+\_\+uart/uc\+\_\+uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../miniprintf/miniprintf.\+h\char`\"{}}\newline
+Include dependency graph for print.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{print_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{print_8c_ab822ae4bef2935ed757393873841eb41}{print\+\_\+setup} (void)
+\begin{DoxyCompactList}\small\item\em $<$Print header file. \end{DoxyCompactList}\item 
+void \hyperlink{print_8c_a6483da854ca8076e0b947adaf1668954}{print} (const char $\ast$format,...)
+\begin{DoxyCompactList}\small\item\em Function to print to console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Print functions definitions. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{print_8c_a6483da854ca8076e0b947adaf1668954}\label{print_8c_a6483da854ca8076e0b947adaf1668954}} 
+\index{print.\+c@{print.\+c}!print@{print}}
+\index{print@{print}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void print (\begin{DoxyParamCaption}\item[{const char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Function to print to console. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em format} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{print_8c_ab822ae4bef2935ed757393873841eb41}\label{print_8c_ab822ae4bef2935ed757393873841eb41}} 
+\index{print.\+c@{print.\+c}!print\+\_\+setup@{print\+\_\+setup}}
+\index{print\+\_\+setup@{print\+\_\+setup}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+setup()}{print\_setup()}}
+{\footnotesize\ttfamily void print\+\_\+setup (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+$<$Print header file. 
+
+$<$Include print parameters.
+
+$<$Miniprint include. Sets up parameters needed to print to console. 

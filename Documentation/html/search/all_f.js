@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['uart',['UART',['../print__params_8h.html#af7cb12b462b4594bd759d1b4e241ec4c',1,'print_params.h']]],
+  ['uart_5fpin_5fsetup',['uart_pin_setup',['../uc__uart_8c.html#a4c32397c8b24d1f414bb4ace805c795e',1,'uart_pin_setup(uint32_t tx_port, uint32_t tx_pin, uint32_t rx_port, uint32_t rx_pin):&#160;uc_uart.c'],['../uc__uart_8h.html#a4c32397c8b24d1f414bb4ace805c795e',1,'uart_pin_setup(uint32_t tx_port, uint32_t tx_pin, uint32_t rx_port, uint32_t rx_pin):&#160;uc_uart.c']]],
+  ['uart_5fprintf',['uart_printf',['../uc__uart_8c.html#a953fcdef2bec3905b52c22983a8567eb',1,'uart_printf(const char *format,...):&#160;uc_uart.c'],['../uc__uart_8h.html#a953fcdef2bec3905b52c22983a8567eb',1,'uart_printf(const char *format,...):&#160;uc_uart.c']]],
+  ['uart_5fputc',['uart_putc',['../uc__uart_8c.html#ae468e0937557eefb10705cec62e1599b',1,'uart_putc(char ch):&#160;uc_uart.c'],['../uc__uart_8h.html#ae468e0937557eefb10705cec62e1599b',1,'uart_putc(char ch):&#160;uc_uart.c']]],
+  ['uart_5frx_5fpin',['UART_RX_PIN',['../print__params_8h.html#aa37eca6fe61f6938d925975dff27c8fd',1,'print_params.h']]],
+  ['uart_5frx_5fport',['UART_RX_PORT',['../print__params_8h.html#a151b6aa11aa5aad16c7468122af3b3a3',1,'print_params.h']]],
+  ['uart_5fsetup',['uart_setup',['../uc__uart_8c.html#a65773aa4e29491601b9ec336332fb8c4',1,'uart_setup(uint32_t uart, uint32_t baudrate, uint32_t databits):&#160;uc_uart.c'],['../uc__uart_8h.html#a65773aa4e29491601b9ec336332fb8c4',1,'uart_setup(uint32_t uart, uint32_t baudrate, uint32_t databits):&#160;uc_uart.c']]],
+  ['uart_5fstart',['uart_start',['../uc__uart_8c.html#a4b03985035c306b5819e23671abfe049',1,'uart_start(uint32_t uart):&#160;uc_uart.c'],['../uc__uart_8h.html#a4b03985035c306b5819e23671abfe049',1,'uart_start(uint32_t uart):&#160;uc_uart.c']]],
+  ['uart_5ftx_5fpin',['UART_TX_PIN',['../print__params_8h.html#a6c82a6844388a551e8f06d249598989e',1,'print_params.h']]],
+  ['uart_5ftx_5fport',['UART_TX_PORT',['../print__params_8h.html#a8b2ea1898f38cfe1f20ca4e2e155e2bd',1,'print_params.h']]],
+  ['uc_5ftimer_2ec',['uc_timer.c',['../uc__timer_8c.html',1,'']]],
+  ['uc_5ftimer_2eh',['uc_timer.h',['../uc__timer_8h.html',1,'']]],
+  ['uc_5ftimer_5fconfig_5fperiod',['uc_timer_config_period',['../uc__timer_8c.html#a5ace3c51af58c627a2448d7af70f170f',1,'uc_timer_config_period(uint32_t timer, uint32_t period):&#160;uc_timer.c'],['../uc__timer_8h.html#a5ace3c51af58c627a2448d7af70f170f',1,'uc_timer_config_period(uint32_t timer, uint32_t period):&#160;uc_timer.c']]],
+  ['uc_5ftimer_5fenable_5finterrupt',['uc_timer_enable_interrupt',['../uc__timer_8c.html#ac1f3c225897cfdee7111bcf69ffd0222',1,'uc_timer_enable_interrupt(uint32_t timer, uint8_t irqn):&#160;uc_timer.c'],['../uc__timer_8h.html#ac1f3c225897cfdee7111bcf69ffd0222',1,'uc_timer_enable_interrupt(uint32_t timer, uint8_t irqn):&#160;uc_timer.c']]],
+  ['uc_5ftimer_5fpwm_5fconfig_5fduty_5fcycle',['uc_timer_pwm_config_duty_cycle',['../uc__timer_8c.html#a1ca803f1f79b91d0fa7622bf5161b94e',1,'uc_timer_pwm_config_duty_cycle(uint32_t timer, enum tim_oc_id channel, uint32_t duty_cycle):&#160;uc_timer.c'],['../uc__timer_8h.html#a1ca803f1f79b91d0fa7622bf5161b94e',1,'uc_timer_pwm_config_duty_cycle(uint32_t timer, enum tim_oc_id channel, uint32_t duty_cycle):&#160;uc_timer.c']]],
+  ['uc_5ftimer_5fpwm_5fpin_5fsetup',['uc_timer_pwm_pin_setup',['../uc__timer_8c.html#a58293981ed0469d0d2b0cc0e70beecce',1,'uc_timer_pwm_pin_setup(enum rcc_periph_clken gpio_clk, uint32_t gpio_port, uint16_t gpio_pin):&#160;uc_timer.c'],['../uc__timer_8h.html#a58293981ed0469d0d2b0cc0e70beecce',1,'uc_timer_pwm_pin_setup(enum rcc_periph_clken gpio_clk, uint32_t gpio_port, uint16_t gpio_pin):&#160;uc_timer.c']]],
+  ['uc_5ftimer_5fpwm_5fsetup',['uc_timer_pwm_setup',['../uc__timer_8c.html#a3783dcda7914f2a5113a276bbb6d886d',1,'uc_timer_pwm_setup(enum rcc_periph_clken timer_clk, uint32_t timer, enum tim_oc_id channel, uint32_t prescaler):&#160;uc_timer.c'],['../uc__timer_8h.html#a3783dcda7914f2a5113a276bbb6d886d',1,'uc_timer_pwm_setup(enum rcc_periph_clken timer_clk, uint32_t timer, enum tim_oc_id channel, uint32_t prescaler):&#160;uc_timer.c']]],
+  ['uc_5ftimer_5fsetup',['uc_timer_setup',['../uc__timer_8c.html#aa32fe1c6f887bf184010424db5634198',1,'uc_timer_setup(enum rcc_periph_clken timer_clk, uint32_t timer, uint32_t prescaler):&#160;uc_timer.c'],['../uc__timer_8h.html#aa32fe1c6f887bf184010424db5634198',1,'uc_timer_setup(enum rcc_periph_clken timer_clk, uint32_t timer, uint32_t prescaler):&#160;uc_timer.c']]],
+  ['uc_5ftimer_5fstart',['uc_timer_start',['../uc__timer_8c.html#a4962fd7b57586816079db0aa487091d3',1,'uc_timer_start(uint32_t timer):&#160;uc_timer.c'],['../uc__timer_8h.html#a4962fd7b57586816079db0aa487091d3',1,'uc_timer_start(uint32_t timer):&#160;uc_timer.c']]],
+  ['uc_5ftimer_5fstop',['uc_timer_stop',['../uc__timer_8c.html#ab7c0468c8d4fc8bf514ada5ee90671e5',1,'uc_timer_stop(uint32_t timer):&#160;uc_timer.c'],['../uc__timer_8h.html#ab7c0468c8d4fc8bf514ada5ee90671e5',1,'uc_timer_stop(uint32_t timer):&#160;uc_timer.c']]],
+  ['uc_5fuart_2ec',['uc_uart.c',['../uc__uart_8c.html',1,'']]],
+  ['uc_5fuart_2eh',['uc_uart.h',['../uc__uart_8h.html',1,'']]]
+];

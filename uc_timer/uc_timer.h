@@ -1,3 +1,5 @@
+/// @file uc_timer.h
+/// @brief uc_timer header file.
 //  Copyright 2020 Copyright Equipo 2
 #ifndef UC_TIMER_H_   /* Include guard */
 #define UC_TIMER_H_

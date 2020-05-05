@@ -1,0 +1,3 @@
+/home/jonacb/stm32/ExamenEmbebidos2/miniprintf/miniprintf.c:24: warning: Member miniarg_t (typedef) of file miniprintf.c is not documented.
+/home/jonacb/stm32/ExamenEmbebidos2/miniprintf/miniprintf.h:23: warning: Member mini_snprintf(char *buf, unsigned maxbuf, const char *format,...) __attribute((format(printf (function) of file miniprintf.h is not documented.
+/home/jonacb/stm32/ExamenEmbebidos2/miniprintf/miniprintf.c:161: warning: Found unknown command `\r'

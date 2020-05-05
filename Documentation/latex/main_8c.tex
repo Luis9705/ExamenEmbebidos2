@@ -1,0 +1,72 @@
+\hypertarget{main_8c}{}\section{/home/jonacb/stm32/\+Examen\+Embebidos2/main.c File Reference}
+\label{main_8c}\index{/home/jonacb/stm32/\+Examen\+Embebidos2/main.\+c@{/home/jonacb/stm32/\+Examen\+Embebidos2/main.\+c}}
+
+
+Main code for this project.  
+
+
+{\ttfamily \#include \char`\"{}system\+\_\+common/system\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}timer/timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}delay/delay.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}print/print.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}buttons/buttons.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}led/led.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{main_8c_a4a3a6e72418c2bb8d8b1ce55c1a655c0}{timer\+Status\+Type} \{ \hyperlink{main_8c_a4a3a6e72418c2bb8d8b1ce55c1a655c0aac132f2982b98bcaa3445e535a03ff75}{O\+FF}, 
+\hyperlink{main_8c_a4a3a6e72418c2bb8d8b1ce55c1a655c0a1061be6c3fb88d32829cba6f6b2be304}{R\+U\+N\+N\+I\+NG}, 
+\hyperlink{main_8c_a4a3a6e72418c2bb8d8b1ce55c1a655c0ad4bb05915de3c370d3a33d4f51389655}{P\+A\+U\+S\+ED}
+ \}\begin{DoxyCompactList}\small\item\em $<$System common defines. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+int \hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a722c7add7953a03d0f6dcc1a67aba2cd}\label{main_8c_a722c7add7953a03d0f6dcc1a67aba2cd}} 
+\hyperlink{main_8c_a4a3a6e72418c2bb8d8b1ce55c1a655c0}{timer\+Status\+Type} \hyperlink{main_8c_a722c7add7953a03d0f6dcc1a67aba2cd}{timer\+\_\+status} = \hyperlink{main_8c_a4a3a6e72418c2bb8d8b1ce55c1a655c0aac132f2982b98bcaa3445e535a03ff75}{O\+FF}
+\begin{DoxyCompactList}\small\item\em Timer default status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main code for this project. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{main_8c_a4a3a6e72418c2bb8d8b1ce55c1a655c0}\label{main_8c_a4a3a6e72418c2bb8d8b1ce55c1a655c0}} 
+\index{main.\+c@{main.\+c}!timer\+Status\+Type@{timer\+Status\+Type}}
+\index{timer\+Status\+Type@{timer\+Status\+Type}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{timer\+Status\+Type}{timerStatusType}}
+{\footnotesize\ttfamily enum \hyperlink{main_8c_a4a3a6e72418c2bb8d8b1ce55c1a655c0}{timer\+Status\+Type}}
+
+
+
+$<$System common defines. 
+
+$<$Delay header file include. $<$Button header file include. L\+ED header file include. Enum class defining the timer status. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+FF@{O\+FF}!main.\+c@{main.\+c}}\index{main.\+c@{main.\+c}!O\+FF@{O\+FF}}}\mbox{\Hypertarget{main_8c_a4a3a6e72418c2bb8d8b1ce55c1a655c0aac132f2982b98bcaa3445e535a03ff75}\label{main_8c_a4a3a6e72418c2bb8d8b1ce55c1a655c0aac132f2982b98bcaa3445e535a03ff75}} 
+O\+FF&Timer is off. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+U\+N\+N\+I\+NG@{R\+U\+N\+N\+I\+NG}!main.\+c@{main.\+c}}\index{main.\+c@{main.\+c}!R\+U\+N\+N\+I\+NG@{R\+U\+N\+N\+I\+NG}}}\mbox{\Hypertarget{main_8c_a4a3a6e72418c2bb8d8b1ce55c1a655c0a1061be6c3fb88d32829cba6f6b2be304}\label{main_8c_a4a3a6e72418c2bb8d8b1ce55c1a655c0a1061be6c3fb88d32829cba6f6b2be304}} 
+R\+U\+N\+N\+I\+NG&Timer is running. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+A\+U\+S\+ED@{P\+A\+U\+S\+ED}!main.\+c@{main.\+c}}\index{main.\+c@{main.\+c}!P\+A\+U\+S\+ED@{P\+A\+U\+S\+ED}}}\mbox{\Hypertarget{main_8c_a4a3a6e72418c2bb8d8b1ce55c1a655c0ad4bb05915de3c370d3a33d4f51389655}\label{main_8c_a4a3a6e72418c2bb8d8b1ce55c1a655c0ad4bb05915de3c370d3a33d4f51389655}} 
+P\+A\+U\+S\+ED&Timer is paused. \\
+\hline
+
+\end{DoxyEnumFields}

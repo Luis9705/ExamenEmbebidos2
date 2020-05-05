@@ -1,4 +1,5 @@
 /// @file uc_uart.c
+/// @brief uc_uart function definitions.
 //  Copyright 2020 Copyright Equipo 2
 #include "uc_uart.h"                        ///<UART custom defines.
 #include <libopencm3/stm32/usart.h>         ///<libopencm3 USART functions.
@@ -11,7 +12,7 @@ uint32_t current_uart; ///<Currently used UART.
 
 /**
  * @brief Sends a char.
- * @param[in] character Char to be transmitted.
+ * @param[in] ch Char to be transmitted.
  */
 void uart_putc(char ch)  {
     usart_send_blocking(current_uart, ch);
@@ -20,7 +21,7 @@ void uart_putc(char ch)  {
 /**
  * @brief Prints UART message
  * @param[in] format String format.
- * @param[out] rc
+ * @return rc
  */
 int uart_printf(const char *format, ...)  {
     va_list args;

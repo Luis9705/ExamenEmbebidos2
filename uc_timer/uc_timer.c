@@ -1,9 +1,10 @@
 /// @file uc_timer.c
+/// @brief uc_timer functions.
 //  Copyright 2020 Copyright Equipo 2
 #include "uc_timer.h"
 
 /**
- * Sets up the PWM peripheral pin ports needed.
+ * @brief Sets up the PWM peripheral pin ports needed.
  * @param[in] gpio_clk
  * @param[in] gpio_port
  * @param[in] gpio_pin
@@ -18,7 +19,7 @@ void uc_timer_pwm_pin_setup(enum rcc_periph_clken gpio_clk,  \
 }
 
 /**
- * Sets up the timer prescaler and enabled the clock.
+ * @brief Sets up the timer prescaler and enabled the clock.
  * @param[in] timer_clk
  * @param[in] timer
  * @param[in] prescaler
@@ -33,8 +34,8 @@ void uc_timer_setup(enum rcc_periph_clken timer_clk,  uint32_t timer, \
 }
 
 /**
- * Enables and sets up the timer's pwm.
- * @param[in] clock
+ * @brief Enables and sets up the timer's pwm.
+ * @param[in] timer_clk
  * @param[in] timer
  * @param[in] channel
  * @param[in] prescaler
@@ -59,7 +60,7 @@ void uc_timer_pwm_setup(enum rcc_periph_clken timer_clk,  uint32_t timer,  \
 }
 
 /**
- * Configures the timer's period.
+ * @brief Configures the timer's period.
  * @param[in] timer
  * @param[in] period
  */
@@ -69,9 +70,10 @@ void uc_timer_config_period(uint32_t timer,  uint32_t period) {
 }
 
 /**
- * Configures the timer's pwm duty cycle.
- * @param[in] timer
- * @param[in] channel
+ * @brief Configures the timer's pwm duty cycle.
+ * @param[in] timer Timer used.
+ * @param[in] channel Timer channel.
+ * @param[in] duty_cycle States the duty cycle of the timer.
  */
 void uc_timer_pwm_config_duty_cycle(uint32_t timer,  enum tim_oc_id channel,  \
     uint32_t duty_cycle) {
@@ -80,9 +82,9 @@ void uc_timer_pwm_config_duty_cycle(uint32_t timer,  enum tim_oc_id channel,  \
 }
 
 /**
- * Enables timer's interrupt.
- * @param[in] timer
- * @param[in] irqn
+ * @brief Enables timer's interrupt.
+ * @param[in] timer Timer used.
+ * @param[in] irqn Timer Interrupt Service Request to be enabled.
  */
 void uc_timer_enable_interrupt(uint32_t timer,  uint8_t irqn) {
     timer_enable_irq(timer, TIM_DIER_UIE);  // update event interrupt
@@ -91,16 +93,16 @@ void uc_timer_enable_interrupt(uint32_t timer,  uint8_t irqn) {
 }
 
 /**
- * Starts the timer.
- * @param[in] timer
+ * @brief Starts the timer.
+ * @param[in] timer Timer used.
  */
 void uc_timer_start(uint32_t timer) {
     timer_enable_counter(timer);
 }
 
 /**
- * Stops the tmer.
- * @param[in] timer
+ * @brief Stops the timer.
+ * @param[in] timer Timer used.
  */
 void uc_timer_stop(uint32_t timer) {
     timer_disable_counter(timer);

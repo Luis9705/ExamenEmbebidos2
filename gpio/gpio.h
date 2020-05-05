@@ -1,9 +1,10 @@
 /// @file gpio.h
+/// @brief GPIO header file.
 //  Copyright 2020 Copyright Equipo 2
 #ifndef GPIO_H_   /* Include guard */
 #define GPIO_H_
 
-#include <stdint.h>
+#include <stdint.h>   ///<stdint definitions.
 
 /// Enum class defining the pin mode.
 typedef enum  {

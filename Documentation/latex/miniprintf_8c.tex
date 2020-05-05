@@ -1,0 +1,87 @@
+\hypertarget{miniprintf_8c}{}\section{/home/jonacb/stm32/\+Examen\+Embebidos2/miniprintf/miniprintf.c File Reference}
+\label{miniprintf_8c}\index{/home/jonacb/stm32/\+Examen\+Embebidos2/miniprintf/miniprintf.\+c@{/home/jonacb/stm32/\+Examen\+Embebidos2/miniprintf/miniprintf.\+c}}
+
+
+miniprintf functions definitions.  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}miniprintf.\+h\char`\"{}}\newline
+Include dependency graph for miniprintf.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{miniprintf_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structs__mini__args}{s\+\_\+mini\+\_\+args}
+\item 
+struct \hyperlink{structs__internal}{s\+\_\+internal}
+\item 
+struct \hyperlink{structs__mini__sprintf}{s\+\_\+mini\+\_\+sprintf}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{miniprintf_8c_a77e49d83b074c279428b0cbb40dd26ec}\label{miniprintf_8c_a77e49d83b074c279428b0cbb40dd26ec}} 
+typedef struct \hyperlink{structs__mini__args}{s\+\_\+mini\+\_\+args} {\bfseries miniarg\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{miniprintf_8c_a5bcf7f52ea6b2478c0ffb19d2ce4e5e5}{mini\+\_\+vprintf\+\_\+cooked} (void($\ast$putc)(char), const char $\ast$format, va\+\_\+list args)
+\item 
+int \hyperlink{miniprintf_8c_a1a532af594af9bb55f27718b227f5ccc}{mini\+\_\+vprintf\+\_\+uncooked} (void($\ast$putc)(char), const char $\ast$format, va\+\_\+list args)
+\item 
+int \hyperlink{miniprintf_8c_a9e466140f44967cb1b6310c5f57e2e86}{mini\+\_\+snprintf} (char $\ast$buf, unsigned maxbuf, const char $\ast$format,...)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+miniprintf functions definitions. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{miniprintf_8c_a9e466140f44967cb1b6310c5f57e2e86}\label{miniprintf_8c_a9e466140f44967cb1b6310c5f57e2e86}} 
+\index{miniprintf.\+c@{miniprintf.\+c}!mini\+\_\+snprintf@{mini\+\_\+snprintf}}
+\index{mini\+\_\+snprintf@{mini\+\_\+snprintf}!miniprintf.\+c@{miniprintf.\+c}}
+\subsubsection{\texorpdfstring{mini\+\_\+snprintf()}{mini\_snprintf()}}
+{\footnotesize\ttfamily int mini\+\_\+snprintf (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{unsigned}]{maxbuf,  }\item[{const char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+External\+: sprintf() to buffer (not cooked) printf struct
+
+sprintf control
+
+format arguments
+
+Return count
+
+Internal routine
+
+Using ctl to guide it
+
+Destination for data
+
+Max size in bytes
+
+Calculate count
+
+Null terminate output if possible
+
+Return formatted count \mbox{\Hypertarget{miniprintf_8c_a5bcf7f52ea6b2478c0ffb19d2ce4e5e5}\label{miniprintf_8c_a5bcf7f52ea6b2478c0ffb19d2ce4e5e5}} 
+\index{miniprintf.\+c@{miniprintf.\+c}!mini\+\_\+vprintf\+\_\+cooked@{mini\+\_\+vprintf\+\_\+cooked}}
+\index{mini\+\_\+vprintf\+\_\+cooked@{mini\+\_\+vprintf\+\_\+cooked}!miniprintf.\+c@{miniprintf.\+c}}
+\subsubsection{\texorpdfstring{mini\+\_\+vprintf\+\_\+cooked()}{mini\_vprintf\_cooked()}}
+{\footnotesize\ttfamily int mini\+\_\+vprintf\+\_\+cooked (\begin{DoxyParamCaption}\item[{void($\ast$)(char)}]{putc,  }\item[{const char $\ast$}]{format,  }\item[{va\+\_\+list}]{args }\end{DoxyParamCaption})}
+
+External\+: Perform cooked mode printf() \mbox{\Hypertarget{miniprintf_8c_a1a532af594af9bb55f27718b227f5ccc}\label{miniprintf_8c_a1a532af594af9bb55f27718b227f5ccc}} 
+\index{miniprintf.\+c@{miniprintf.\+c}!mini\+\_\+vprintf\+\_\+uncooked@{mini\+\_\+vprintf\+\_\+uncooked}}
+\index{mini\+\_\+vprintf\+\_\+uncooked@{mini\+\_\+vprintf\+\_\+uncooked}!miniprintf.\+c@{miniprintf.\+c}}
+\subsubsection{\texorpdfstring{mini\+\_\+vprintf\+\_\+uncooked()}{mini\_vprintf\_uncooked()}}
+{\footnotesize\ttfamily int mini\+\_\+vprintf\+\_\+uncooked (\begin{DoxyParamCaption}\item[{void($\ast$)(char)}]{putc,  }\item[{const char $\ast$}]{format,  }\item[{va\+\_\+list}]{args }\end{DoxyParamCaption})}
+
+External\+: Perform uncooked (as is) printf() 
