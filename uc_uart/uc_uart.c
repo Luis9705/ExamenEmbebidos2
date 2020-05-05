@@ -65,7 +65,7 @@ void uart_setup(uint32_t uart, uint32_t baudrate, uint32_t databits) {
 /**
  * Starts UART.
  */
-void uart_start(void) {
+void uart_start(uint32_t uart) {
     usart_enable(uart);
     usart_wait_send_ready(uart);
     current_uart = uart;
