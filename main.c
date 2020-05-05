@@ -3,7 +3,7 @@
 
 #include <stdlib.h>
 #include "system_common/system_common.h"
-#include "uc_timer/uc_timer.h"
+#include "timer/timer.h"
 #include "delay/delay.h"
 #include "print/print.h"
 #include "buttons/buttons.h"
@@ -28,16 +28,13 @@ int main(void)  {
     led_setup();
     delay_setup();
     print_setup();
-
-
-
     timer_setup();
 
 
     for (;;)  {
 
         if(reset_button_pressed()){
-            timer_reset();
+            timer_rst();
             print("Timer Reset.\n");
             led_off(); 
             timer_status = OFF;
@@ -69,7 +66,7 @@ int main(void)  {
 
         if(timer_status == RUNNING){
             led_toggle();
-            delay(1000);
+            delay_ms(1000);
         }
 
     }

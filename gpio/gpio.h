@@ -8,7 +8,7 @@
 /// Enum class defining the pin mode.
 typedef enum  {
   INPUT, ///<Input mode.
-  OUPUT  ///<Output mode.
+  OUTPUT  ///<Output mode.
 } pinModeType;
 
 /// Enum class defining different pin status.

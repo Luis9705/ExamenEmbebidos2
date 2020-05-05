@@ -4,6 +4,8 @@
 #ifndef UC_UART_H_   /* Include guard */
 #define UC_UART_H_
 
+#include <stdint.h>
+
 void uart_pin_setup(uint32_t tx_port, uint32_t tx_pin, uint32_t rx_port, uint32_t rx_pin);
 void uart_setup(uint32_t uart, uint32_t baudrate, uint32_t databits) ;
 void uart_start(uint32_t uart);
