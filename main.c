@@ -1,7 +1,7 @@
 /// @file main.c
 //  Copyright 2020 Copyright Equipo 2
 
-#include <stdlib.h>
+
 #include "system_common/system_common.h"
 #include "timer/timer.h"
 #include "delay/delay.h"

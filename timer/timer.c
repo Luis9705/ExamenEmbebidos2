@@ -1,4 +1,5 @@
 #include "timer.h"
+#include "../uc_timer/uc_timer.h"
 
 void timer_setup(void){
 
