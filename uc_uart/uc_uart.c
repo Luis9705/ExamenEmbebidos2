@@ -7,12 +7,14 @@
 #include <libopencm3/stm32/gpio.h>
 #include "../miniprintf/miniprintf.h"
 
+uint32_t current_uart;
+
 /**
  * Starts UART transmission.
  * @param[in] character
  */
 void uart_putc(char ch)  {
-    usart_send_blocking(USART1, ch);
+    usart_send_blocking(current_uart, ch);
 }
 
 /**
@@ -33,44 +35,38 @@ int uart_printf(const char *format, ...)  {
 /**
  * Sets up the UART peripheral pin ports needed.
  */
-void uart_pin_setup(void) {
-    rcc_periph_clock_enable(RCC_GPIOA);
+void uart_pin_setup(uint32_t tx_port, uint32_t tx_pin, uint32_t rx_port, uint32_t rx_pin) {
+    rcc_periph_clock_enable(tx_port);
+    rcc_periph_clock_enable(rx_port);
     // PA9 y PA10
-    gpio_set_mode(GPIOA,
+    gpio_set_mode(tx_port,
         GPIO_MODE_OUTPUT_50_MHZ,
         GPIO_CNF_OUTPUT_ALTFN_PUSHPULL,
-        GPIO_USART1_TX);
-    gpio_set_mode(GPIOA,  GPIO_MODE_INPUT,
+        tx_pin);
+    gpio_set_mode(rx_port,  GPIO_MODE_INPUT,
         GPIO_CNF_INPUT_FLOAT,
-        GPIO_USART1_RX);
+        rx_pin);
 }
 
 /**
  * Sets up the UART configuration.
  */
-void uart_setup(void) {
-    rcc_periph_clock_enable(RCC_USART1);
-    usart_set_baudrate(USART1, 115200);
-    usart_set_databits(USART1, 8);
-    usart_set_stopbits(USART1, USART_STOPBITS_1);
-    usart_set_mode(USART1, USART_MODE_TX_RX);
-    usart_set_parity(USART1, USART_PARITY_NONE);
-    usart_set_flow_control(USART1, USART_FLOWCONTROL_NONE);
+void uart_setup(uint32_t uart, uint32_t baudrate, uint32_t databits) {
+    rcc_periph_clock_enable(uart);
+    usart_set_baudrate(uart, baudrate);
+    usart_set_databits(uart, databits);
+    usart_set_stopbits(uart, USART_STOPBITS_1);
+    usart_set_mode(uart, USART_MODE_TX_RX);
+    usart_set_parity(uart, USART_PARITY_NONE);
+    usart_set_flow_control(uart, USART_FLOWCONTROL_NONE);
 }
 
-/**
- * Enables UART receiving interrupt.
- */
-void uart_enable_rx_interrupt(void) {
-    usart_enable_rx_interrupt(USART1);
-    nvic_clear_pending_irq(NVIC_USART1_IRQ);
-    nvic_enable_irq(NVIC_USART1_IRQ);
-}
 
 /**
  * Starts UART.
  */
 void uart_start(void) {
-    usart_enable(USART1);
-    usart_wait_send_ready(USART1);
+    usart_enable(uart);
+    usart_wait_send_ready(uart);
+    current_uart = uart;
 }

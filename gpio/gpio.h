@@ -6,7 +6,7 @@
 
 typedef enum  {
   INPUT,
-  OUPUT
+  OUTPUT
 } pinModeType;
 
 typedef enum  {

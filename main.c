@@ -31,7 +31,10 @@ int main(void)  {
     gpio_init_pin(STOP_BUTTON_PORT, STOP_BUTTON_PIN,INPUT);
 
     delay_setup();
+
+    uart_pin_setup();
     uart_setup();
+    uart_start();
 
     timer_setup();
 
