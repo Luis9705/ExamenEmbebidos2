@@ -7,6 +7,7 @@
 #include "delay/delay.h"
 #include "uc_uart/uc_uart.h"
 #include "buttons/buttons.h"
+#include "led/led.h"
 #include "parameters.h"
 
 
@@ -23,8 +24,7 @@ timerStatusType timer_status = OFF;
 int main(void)  {
     system_clock_setup();
 
-     gpio_init_pin(LED_PORT, LED_PIN, OUTPUT);
-    gpio_pin_set(LED_PORT, LED_PIN); //logica inversa para apagar led
+
 
 
     buttons_setup();
@@ -43,7 +43,7 @@ int main(void)  {
         if(reset_button_pressed()){
             timer_reset();
             uart_printf("Timer Reset.\n");
-            gpio_pin_set(LED_PORT, LED_PIN); //apagar led
+            led_off(); 
             timer_status = OFF;
         }
 
@@ -66,13 +66,13 @@ int main(void)  {
         if(stop_button_pressed()){
             timer_status = PAUSED;
             timer_stop();
-            gpio_pin_set(LED_PORT, LED_PIN); //apagar led
+            led_off(); 
             int seconds = timer_get_seconds();
             uart_printf("Timer Stopped, time is: %d seconds\n", seconds);
         }
 
         if(timer_status == RUNNING){
-            gpio_pin_toggle(LED_PORT, LED_PIN);
+            led_toggle();
             delay(1000);
         }
 
