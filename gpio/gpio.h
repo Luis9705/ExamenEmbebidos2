@@ -1,17 +1,20 @@
+/// @file gpio.h
 //  Copyright 2020 Copyright Equipo 2
 #ifndef GPIO_H_   /* Include guard */
 #define GPIO_H_
 
 #include <stdint.h>
 
+/// Enum class defining the pin mode.
 typedef enum  {
-  INPUT,
-  OUTPUT
+  INPUT, ///<Input mode.
+  OUPUT  ///<Output mode.
 } pinModeType;
 
+/// Enum class defining different pin status.
 typedef enum  {
-  SET,
-  RESET
+  SET,  ///<Pin is set.
+  RESET ///<Pin is cleared.
 } pinStatusType;
 
 
